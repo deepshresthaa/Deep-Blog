@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NLP APP | Register Page</title>
+  </head>
+  <body>
+    <h1>Deep's Blog</h1>
+    <fieldset style="width: 400px">
+      <form action="/perform_registration" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="users_name" id="name" /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" name="users_email" id="email" /><br /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" name="users_password" id="password" /><br />
+
+        {% if message %}
+        <p style="color: red">{{message}}</p>
+        {%endif%}
+        <input type="submit" name="" value="Register" />
+        <p>Already a member? <a href="/">Login now</a></p>
+      </form>
+    </fieldset>
+  </body>
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="download (1).jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="download (1).jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="download (1).jpg" />
+    <link rel="manifest" href="download (1).jpg" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 70%;
+        padding: 20px;
+      }
+      header {
+        text-align: center;
+      }
+      header h2 {
+        font-size: 2rem;
+        padding: 10px;
+      }
+      header p {
+        font-size: 1.1rem;
+        max-width: 568px;
+        margin: 20px auto;
+
+        /* text-align: center; */
+        color: rgb(83, 79, 79);
+      }
+      /* main */
+      main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
+        justify-content: center;
+        /* align-items: center; */
+        /* border: 1px solid rgb(239, 228, 228); */
+        /* box-shadow: 0.5px 0.5px 3px 0.8px rgb(59, 47, 47); */
+      }
+      .card_container {
+        /* height: 300px;
+   width: 200px; */
+        /* display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; */
+        /* border: 1px solid black; */
+        margin: 1rem 1rem;
+        padding-bottom: 1rem;
+        box-shadow: 1px 1px 5px grey;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .image_container {
+        height: 180px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+      .card-image {
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+      }
+      .text_container {
+        height: 80px;
+        /* text-align: justify; */
+        padding: 0.1rem 0.7rem;
+        margin: 0rem 1rem;
+      }
+      .text-header {
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 4px;
+        font-family: sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      .text-paragraph {
+        font-size: 0.88rem;
+        color: rgb(83, 79, 79);
+      }
+
+      .author_info_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.1rem 0.7rem;
+        margin: 0rem 1rem;
+      }
+      .author-data {
+        display: flex;
+        flex-direction: row;
+      }
+      .author-avatar {
+        height: 30px;
+        width: 30px;
+        background-color: rgb(240, 240, 187);
+        border-radius: 10px;
+        margin-right: 8px;
+        overflow: hidden;
+      }
+      .span-name {
+        font-size: 0.95rem;
+        width: 65px;
+        color: rgb(15, 15, 182);
+      }
+      .name-date {
+        /* padding: 1px 2px; */
+        display: flex;
+        flex-direction: column;
+      }
+      .span-date {
+        width: 72px;
+        color: rgb(83, 79, 79);
+        font-size: 0.7rem;
+      }
+      .author-button {
+        font-size: 0.8rem;
+        width: 80px;
+        border: 1px solid grey;
+        border-radius: 3px;
+        height: 1.5rem;
+        padding: 6px;
+        margin-top: 9px;
+        /* width: 85px; */
+        color: rgb(83, 79, 79);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card_container:hover .card-image {
+        transform: scale(1.2);
+        transition-duration: 0.4s;
+      }
+      .text-header:hover {
+        color: blue;
+      }
+      /* @media ( min-width:600px) and (max-width:900px)
+{
+    main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width:900px) and (max-width:1040px)
+{
+    main{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1380px)
+{
+    main{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media (max-width:600px)
+{
+    header p{
+        padding: 1rem 1rem;
+        margin: 0px;
+    }
+    main{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 0px;
+        padding-top: 0.7rem;
+    }
+    /* .container{
+        margin-top: 0px;
+    }
+} */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Deep Blogs</h2>
+        <p>
+          Utilize this space to incorporate a captivating subheading crafted by
+          ChatGPT, adding depth and intrigue to your blog.
+        </p>
+      </header>
+      <main>
+        <!-- card 1 start -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="	https://source.unsplash.com/random/600%C3%97400?gadgets"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">New Gadgets Released</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <!-- card 1 ends -->
+
+        <!-- card 2 start -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="	https://source.unsplash.com/random/600%C3%97400?nutrition"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Healthy diet</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <!-- card 2 ends -->
+
+        <!-- card 3 start -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="https://source.unsplash.com/random/600%C3%97400?travel"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Travel</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <!-- card 3 end -->
+        <!-- card 4 start -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="	https://source.unsplash.com/random/600%C3%97400?productivity"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Productivity</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <!-- card 4 ends -->
+
+        <!-- card 5 start -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="https://source.unsplash.com/random/600%C3%97400?mindfulness"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Mindfulness</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <!-- card 5 ends -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="https://source.unsplash.com/random/600%C3%97400?rollsroyce"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Rolls Royce</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="	https://source.unsplash.com/random/600%C3%97400?boxing"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Boxing</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="https://source.unsplash.com/random/600%C3%97400?sustainability"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Sustainability</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="	https://source.unsplash.com/random/600%C3%97400?geopolitics"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Geo Politics</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="	https://source.unsplash.com/random/600%C3%97400?tesla"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Tesla</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <!-- card 1 ends -->
+
+        <!-- card 2 start -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="	https://source.unsplash.com/random/600%C3%97400?fitness"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">Fitness</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+        <!-- card 2 ends -->
+
+        <!-- card 3 start -->
+        <div class="card_container">
+          <div class="image_container">
+            <a href="#"
+              ><img
+                src="https://source.unsplash.com/random/600%C3%97400?iphone"
+                alt="card 1 image"
+                loading="lazy"
+                class="card-image"
+            /></a>
+          </div>
+          <div class="text_container">
+            <a href="#">
+              <p class="text-header">iPhone</p>
+            </a>
+            <p class="text-paragraph">
+              Check out the latest tech gadgets hitting the market, from
+              smartphones to smartwatches.
+            </p>
+          </div>
+          <div class="author_info_container">
+            <div class="author-data">
+              <div class="author-avatar">
+                <img
+                  loading="lazy"
+                  src="https://api.dicebear.com/7.x/notionists/svg?seed=deep?size=64"
+                  alt="author avatar"
+                />
+              </div>
+
+              <div class="name-date">
+                <span class="span-name">John Doe</span>
+                <span class="span-date">Sept 19, 2021</span>
+              </div>
+            </div>
+            <span class="author-button">Technology</span>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
